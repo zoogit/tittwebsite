@@ -1087,7 +1087,8 @@ h3 {
   }
 
   .awardsBand {
-    padding-bottom: clamp(240px, 60vw, 340px);
+    min-height: clamp(760px, 132vw, 960px);
+    padding-bottom: clamp(320px, 76vw, 440px);
     padding-top: clamp(42px, 11vw, 78px);
   }
 
@@ -1169,6 +1170,8 @@ h3 {
   }
 
   .awardsBand {
+    min-height: clamp(820px, 178vw, 940px);
+    padding-bottom: 390px;
     padding-top: 64px;
   }
 
@@ -1185,6 +1188,11 @@ h3 {
 }
 
 @media (max-width: 390px) {
+  .awardsBand {
+    min-height: 900px;
+    padding-bottom: 430px;
+  }
+
   .introBand {
     margin-bottom: -194px;
     margin-top: -194px;
