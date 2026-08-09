@@ -96,7 +96,7 @@ export default function Home() {
           <p>
             Beta testers always welcomed!
           </p>
-          <a className="betaButton itchButton" href="mailto:beta@zoodesign.games" aria-label="Apply to play on itch.io">
+          <a className="betaButton itchButton" href="https://zooitch.itch.io/thunderterritories" aria-label="Play on itch.io">
             <img src="/itchio.svg" alt="itch.io" />
           </a>
         </div>
