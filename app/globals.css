@@ -1,0 +1,1144 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #21190f;
+  --paper: #fff7df;
+  --cream: #fff3bd;
+  --tomato: #d8402d;
+  --sun: #ffbc3d;
+  --teal: #087e83;
+  --mint: #73bf73;
+  --plum: #47305f;
+  --coal: #18181d;
+  --font-display: "Bungee", "Arial Black", Impact, sans-serif;
+  --font-body: "Lexend", Arial, Helvetica, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--paper);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  overflow: hidden;
+}
+
+.hero {
+  background: var(--coal);
+  min-height: 118vh;
+  padding: 0;
+  position: relative;
+}
+
+.heroTop {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  padding: clamp(16px, 3vw, 32px);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.heroLogo {
+  left: 50%;
+  position: absolute;
+  top: clamp(22px, 3.5vw, 48px);
+  transform: translateX(-50%);
+  width: min(76vw, 920px);
+  z-index: 3;
+}
+
+.heroLogo img {
+  height: auto;
+  width: 100%;
+}
+
+.heroNav {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+
+.heroMenu summary {
+  display: none;
+}
+
+.heroMenu {
+  display: none;
+}
+
+.heroNav a {
+  align-items: center;
+  background: transparent;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  box-shadow: none;
+  color: #fffdf0;
+  display: inline-flex;
+  font-family: var(--font-display);
+  font-size: clamp(1.16rem, 1.45vw, 1.42rem);
+  font-weight: 1000;
+  justify-content: center;
+  min-height: 56px;
+  padding: 14px 24px;
+  text-shadow: 0 3px 0 #050816, 0 6px 18px rgba(0, 0, 0, 0.72);
+  text-transform: uppercase;
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  white-space: nowrap;
+}
+
+.heroNav a:hover,
+.heroNav a:focus-visible {
+  background: var(--tomato);
+  border-color: #050816;
+  box-shadow: 4px 4px 0 rgba(5, 8, 22, 0.86);
+  transform: translate(2px, 2px);
+}
+
+.steamLogoPlaceholder {
+  align-items: center;
+  background: #050816;
+  border: 3px solid rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
+  display: inline-flex;
+  height: 58px;
+  justify-content: center;
+  padding: 10px 14px;
+  width: 150px;
+}
+
+.steamLogoPlaceholder img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.heroActions {
+  align-items: center;
+  bottom: clamp(96px, 12vw, 150px);
+  display: flex;
+  gap: clamp(18px, 3vw, 30px);
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: min(92vw, 760px);
+  z-index: 2;
+}
+
+.heroButton {
+  align-items: center;
+  border: 3px solid #050816;
+  border-radius: 8px;
+  box-shadow: 5px 5px 0 rgba(5, 8, 22, 0.86);
+  display: inline-flex;
+  flex: 1;
+  font-family: var(--font-display);
+  font-weight: 1000;
+  justify-content: center;
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  min-height: 76px;
+  padding: 20px 34px;
+  text-transform: uppercase;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.heroButton:hover,
+.heroButton:focus-visible {
+  box-shadow: 3px 3px 0 rgba(5, 8, 22, 0.86);
+  transform: translate(2px, 2px);
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 48px;
+  max-width: 1180px;
+  position: relative;
+  z-index: 2;
+}
+
+.brand {
+  background: var(--coal);
+  border: 3px solid #fff7c9;
+  border-radius: 8px;
+  box-shadow: 5px 5px 0 rgba(33, 25, 15, 0.35);
+  color: var(--sun);
+  font-size: 1.45rem;
+  font-weight: 1000;
+  letter-spacing: 0;
+  padding: 8px 14px;
+}
+
+.navLinks {
+  display: flex;
+  gap: clamp(14px, 3vw, 34px);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.heroGrid {
+  align-items: center;
+  display: grid;
+  gap: clamp(28px, 5vw, 64px);
+  grid-template-columns: minmax(0, 0.88fr) minmax(320px, 1.12fr);
+  margin: 0 auto;
+  max-width: 1180px;
+  position: relative;
+  z-index: 1;
+}
+
+.heroCopy {
+  text-shadow: 0 2px 12px rgba(24, 24, 29, 0.24);
+}
+
+.eyebrow {
+  color: var(--cream);
+  font-size: 0.82rem;
+  font-weight: 1000;
+  letter-spacing: 0;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 6.6rem);
+  line-height: 0.92;
+  margin: 0 0 22px;
+  max-width: 790px;
+}
+
+.lead {
+  font-size: clamp(1.08rem, 2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 640px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.button {
+  align-items: center;
+  border: 3px solid var(--coal);
+  border-radius: 8px;
+  box-shadow: 5px 5px 0 rgba(24, 24, 29, 0.85);
+  display: inline-flex;
+  font-weight: 1000;
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 22px;
+  text-transform: uppercase;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  box-shadow: 3px 3px 0 rgba(24, 24, 29, 0.85);
+  transform: translate(2px, 2px);
+}
+
+.primary {
+  background: var(--sun);
+  color: var(--coal);
+}
+
+.secondary {
+  background: #fffdf0;
+  color: var(--tomato);
+}
+
+.heroArt {
+  height: 118vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.heroArt img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  width: 100%;
+}
+
+.awardsBand,
+.reviewsBand,
+.screensBand,
+.moreBand,
+.buyBand,
+.wishlistBand {
+  padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 64px);
+}
+
+.reviewsBand {
+  background: var(--paper);
+}
+
+.introBand {
+  align-items: center;
+  background:
+    linear-gradient(rgba(3, 2, 12, 0.04), rgba(3, 2, 12, 0.04)),
+    url("/tear-banner.png") center / 100% 100% no-repeat;
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(-150px, -9vw, -92px);
+  margin-top: clamp(-150px, -9vw, -92px);
+  min-height: clamp(560px, 46vw, 760px);
+  padding: clamp(118px, 12vw, 176px) clamp(18px, 5vw, 92px);
+  position: relative;
+  z-index: 3;
+}
+
+.awardsBand {
+  background: #1b1c1c;
+  color: #fff7df;
+  overflow: hidden;
+  min-height: clamp(660px, 64vw, 900px);
+  padding-bottom: clamp(240px, 22vw, 360px);
+  padding-top: clamp(132px, 13vw, 196px);
+}
+
+.wishlistBand {
+  align-items: center;
+  background: url("/tear-banner22.png") center / 100% 100% no-repeat;
+  color: #fff7df;
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(-170px, -10vw, -96px);
+  margin-top: clamp(-96px, -6vw, -58px);
+  min-height: clamp(500px, 40vw, 720px);
+  padding-bottom: clamp(90px, 10vw, 148px);
+  padding-top: clamp(130px, 12vw, 190px);
+  position: relative;
+  z-index: 2;
+}
+
+.screensBand {
+  background: #dff4ed;
+}
+
+.moreBand {
+  background: #fff7df;
+}
+
+.sectionHeader,
+.introContent,
+.wishlistContent,
+.reviewGrid,
+.screenshotGrid,
+.moreGrid,
+.buyBand {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1180px;
+}
+
+.sectionHeader {
+  margin-bottom: 28px;
+}
+
+.galleryHeader {
+  margin: 0 auto clamp(28px, 4vw, 46px);
+  max-width: 1180px;
+  text-align: center;
+}
+
+.galleryHeader h2 {
+  color: #fffdf0;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.galleryTagline {
+  color: var(--sun);
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.4vw, 2.1rem);
+  line-height: 1.04;
+  margin: clamp(28px, 4vw, 52px) auto 0;
+  max-width: 1180px;
+  text-align: center;
+  text-shadow: 0 3px 0 #050816, 0 6px 18px rgba(0, 0, 0, 0.72);
+  text-transform: uppercase;
+}
+
+.galleryTagline span {
+  display: block;
+}
+
+.introContent {
+  color: #fff7df;
+  max-width: 1420px;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 3px 0 #050816, 0 6px 18px rgba(0, 0, 0, 0.72);
+}
+
+.introContent p {
+  font-family: var(--font-body);
+  font-size: clamp(1.15rem, 2.1vw, 1.75rem);
+  font-weight: 750;
+  line-height: 1.45;
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+.introContent p:first-child {
+  color: var(--sun);
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 4rem);
+  font-weight: 1000;
+  line-height: 1;
+  margin-bottom: clamp(18px, 3vw, 34px);
+  text-transform: uppercase;
+}
+
+.introContent p + p {
+  margin-top: clamp(16px, 2vw, 24px);
+}
+
+.wishlistContent {
+  align-items: center;
+  color: #fff7df;
+  display: grid;
+  gap: clamp(28px, 5vw, 72px);
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+  max-width: 1420px;
+  position: relative;
+  text-align: left;
+  text-shadow: 0 3px 0 #050816, 0 7px 20px rgba(0, 0, 0, 0.72);
+}
+
+.wishlistCopy p {
+  color: var(--sun);
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.9vw, 1.75rem);
+  font-weight: 1000;
+  line-height: 1;
+  margin: 0 0 clamp(16px, 3vw, 30px);
+  text-transform: uppercase;
+}
+
+.wishlistCopy h2 {
+  color: #fffdf0;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.8vw, 6.2rem);
+  font-weight: 1000;
+  line-height: 0.9;
+  margin: 0;
+  max-width: 760px;
+  text-transform: uppercase;
+}
+
+.wishlistButton {
+  align-items: center;
+  background: var(--tomato);
+  border: 4px solid #050816;
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 rgba(5, 8, 22, 0.86);
+  color: #fffdf0;
+  display: inline-flex;
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  font-weight: 1000;
+  gap: 12px;
+  justify-content: center;
+  margin-top: clamp(26px, 4vw, 44px);
+  min-height: 76px;
+  min-width: min(90vw, 360px);
+  padding: 18px 28px;
+  text-shadow: none;
+  text-transform: uppercase;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.wishlistButton:hover,
+.wishlistButton:focus-visible {
+  box-shadow: 3px 3px 0 rgba(5, 8, 22, 0.86);
+  transform: translate(3px, 3px);
+}
+
+.steamWishlistButton {
+  background: #050816;
+  min-width: min(72vw, 240px);
+  padding: 12px 18px;
+}
+
+.steamWishlistButton img {
+  height: 34px;
+  object-fit: contain;
+  width: min(58vw, 180px);
+}
+
+.wishlistImage {
+  border: 8px solid #cdd3d8;
+  box-shadow: 12px 14px 0 rgba(5, 8, 22, 0.55);
+  overflow: hidden;
+}
+
+.wishlistImage img {
+  aspect-ratio: 16 / 10;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.angleBand {
+  background: url("/action1.jpg") center / cover no-repeat;
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-start;
+  min-height: clamp(620px, 62vw, 920px);
+  padding: clamp(140px, 13vw, 210px) clamp(18px, 5vw, 72px) clamp(64px, 8vw, 112px);
+  position: relative;
+}
+
+.betaBox {
+  background: rgba(216, 64, 45, 0.94);
+  border: 5px solid #050816;
+  border-radius: 8px;
+  box-shadow: 10px 10px 0 rgba(5, 8, 22, 0.86);
+  color: #fff7df;
+  max-width: 560px;
+  padding: clamp(24px, 4vw, 42px);
+  position: relative;
+  text-align: left;
+  text-shadow: 0 3px 0 #050816, 0 7px 20px rgba(0, 0, 0, 0.56);
+  transform: translateY(-72px);
+}
+
+.betaBox h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.95rem, 4vw, 3.8rem);
+  font-weight: 1000;
+  line-height: 0.9;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.betaBox p {
+  font-size: clamp(0.92rem, 1.45vw, 1.08rem);
+  font-weight: 900;
+  line-height: 1.45;
+  margin: 20px 0 0;
+  max-width: 500px;
+}
+
+.betaButton {
+  align-items: center;
+  background: var(--tomato);
+  border: 4px solid #050816;
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 rgba(5, 8, 22, 0.86);
+  color: #fffdf0;
+  display: inline-flex;
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  font-weight: 1000;
+  justify-content: center;
+  margin-top: 26px;
+  min-height: 72px;
+  min-width: min(90vw, 300px);
+  padding: 18px 30px;
+  text-transform: uppercase;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.betaButton:hover,
+.betaButton:focus-visible {
+  box-shadow: 3px 3px 0 rgba(5, 8, 22, 0.86);
+  transform: translate(3px, 3px);
+}
+
+.itchButton {
+  background: #ff2449;
+  min-height: 56px;
+  min-width: min(80vw, 190px);
+  padding: 10px 16px;
+}
+
+.itchButton img {
+  height: 32px;
+  object-fit: contain;
+  width: min(58vw, 136px);
+}
+
+.copyrightBand {
+  background: #1b1c1c;
+  color: rgba(255, 253, 240, 0.72);
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  padding: 14px 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.copyrightBand p {
+  margin: 0;
+}
+
+.sectionHeader h2,
+.buyBand h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+  margin: 0;
+  max-width: 800px;
+}
+
+.reviewsBand .eyebrow,
+.screensBand .eyebrow,
+.moreBand .eyebrow,
+.buyBand .eyebrow {
+  color: var(--tomato);
+}
+
+.review,
+.shot,
+.more {
+  border: 3px solid var(--coal);
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 rgba(33, 25, 15, 0.14);
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 0 0 12px;
+}
+
+.shot p,
+.more p,
+.buyBand p {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.reviewGrid,
+.screenshotGrid,
+.moreGrid {
+  display: grid;
+  gap: 18px;
+}
+
+.screenshotCarousel {
+  align-items: center;
+  cursor: grab;
+  display: flex;
+  gap: clamp(24px, 3.4vw, 42px);
+  justify-content: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  width: max-content;
+}
+
+.screenshotCarousel:active {
+  cursor: grabbing;
+}
+
+.galleryShell {
+  margin: 0 auto;
+  position: relative;
+}
+
+.galleryItem {
+  background: transparent;
+  border: 10px solid #7f8588;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.34);
+  cursor: pointer;
+  flex: 0 0 clamp(320px, 27vw, 520px);
+  font: inherit;
+  opacity: 0.52;
+  overflow: hidden;
+  padding: 0;
+  transition: border-color 160ms ease, opacity 160ms ease, transform 160ms ease;
+}
+
+.galleryItem.isFeatured {
+  border-color: #cdd3d8;
+  cursor: grab;
+  flex-basis: clamp(660px, 52vw, 960px);
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.galleryItem:not(.isFeatured):hover,
+.galleryItem:not(.isFeatured):focus-visible {
+  border-color: #cdd3d8;
+  opacity: 0.78;
+  transform: translateY(-4px);
+}
+
+.galleryPlaceholder {
+  align-items: center;
+  aspect-ratio: 16 / 9;
+  background: #050816;
+  border: 3px solid rgba(255, 247, 223, 0.9);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.galleryPlaceholder img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.reviewGrid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.review {
+  align-items: center;
+  background: var(--tomato);
+  color: #fffdf0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 130px;
+  padding: 18px;
+  text-align: center;
+}
+
+.review strong {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1;
+}
+
+.review span {
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-top: 10px;
+}
+
+.screenshotGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.shot {
+  background: #fffdf0;
+  overflow: hidden;
+}
+
+.shot h3,
+.shot p {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.shot h3 {
+  margin-top: 18px;
+}
+
+.shot p {
+  padding-bottom: 20px;
+}
+
+.shotScene {
+  aspect-ratio: 4 / 3;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0 2px, transparent 2px 44px),
+    linear-gradient(180deg, #293650 0 42%, #8a5130 42% 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.shot2 .shotScene {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.22) 0 2px, transparent 2px 44px),
+    linear-gradient(180deg, #0b7f83 0 40%, #f0c05a 40% 100%);
+}
+
+.shot3 .shotScene {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.24) 0 2px, transparent 2px 44px),
+    linear-gradient(180deg, #47305f 0 44%, #73bf73 44% 100%);
+}
+
+.shot4 .shotScene {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 2px, transparent 2px 44px),
+    linear-gradient(180deg, #d8402d 0 38%, #21190f 38% 100%);
+}
+
+.counter,
+.ticket,
+.plate,
+.steam {
+  position: absolute;
+}
+
+.counter {
+  background: #a96336;
+  border: 4px solid #613318;
+  border-radius: 8px;
+  bottom: 16%;
+  height: 26%;
+  left: 8%;
+  width: 84%;
+}
+
+.ticket {
+  background: #fff3bd;
+  border: 3px solid #21190f;
+  border-radius: 4px;
+  height: 22%;
+  right: 16%;
+  top: 16%;
+  transform: rotate(9deg);
+  width: 18%;
+}
+
+.plate {
+  background: #fffdf0;
+  border: 5px solid #ffbc3d;
+  border-radius: 999px;
+  bottom: 34%;
+  height: 20%;
+  left: 28%;
+  width: 30%;
+}
+
+.steam {
+  background: var(--tomato);
+  border-radius: 999px;
+  bottom: 52%;
+  height: 18%;
+  left: 38%;
+  width: 10%;
+}
+
+.steam::before,
+.steam::after {
+  background: inherit;
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+}
+
+.steam::before {
+  height: 80%;
+  left: -120%;
+  top: 28%;
+  width: 80%;
+}
+
+.steam::after {
+  height: 110%;
+  right: -110%;
+  top: -24%;
+  width: 90%;
+}
+
+.buyBand {
+  align-items: center;
+  background: var(--plum);
+  color: #fffdf0;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.buyBand p {
+  max-width: 700px;
+}
+
+.moreGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.more {
+  background: #fffdf0;
+  padding: 18px;
+}
+
+.miniArt {
+  aspect-ratio: 16 / 10;
+  background:
+    radial-gradient(circle at 28% 45%, var(--sun) 0 12%, transparent 13%),
+    radial-gradient(circle at 68% 34%, var(--mint) 0 14%, transparent 15%),
+    linear-gradient(135deg, var(--tomato), var(--teal));
+  border: 3px solid var(--coal);
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+
+.more a {
+  color: var(--tomato);
+  display: inline-block;
+  font-weight: 1000;
+  margin-top: 16px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 980px) {
+  .wishlistContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .wishlistCopy h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wishlistButton {
+    width: min(100%, 340px);
+  }
+
+  .heroGrid,
+  .screenshotGrid,
+  .moreGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reviewGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .heroGrid {
+    align-items: start;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero {
+    min-height: 106vh;
+  }
+
+  .heroArt {
+    height: 106vh;
+  }
+
+  .heroLogo {
+    top: clamp(58px, 16vw, 88px);
+    width: min(96vw, 620px);
+  }
+
+  .heroTop {
+    display: block;
+    padding: 16px;
+    z-index: 10;
+  }
+
+  .heroMenu {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 11;
+  }
+
+  .heroNavDesktop {
+    display: none;
+  }
+
+  .heroMenu summary {
+    align-items: center;
+    background: var(--tomato);
+    border: 3px solid #050816;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 rgba(5, 8, 22, 0.86);
+    color: #fffdf0;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    justify-content: center;
+    list-style: none;
+    min-height: 50px;
+    padding: 12px 18px;
+    text-shadow: 0 3px 0 #050816;
+    text-transform: uppercase;
+  }
+
+  .heroMenu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .heroMenu[open] summary {
+    background: rgba(255, 253, 240, 0.12);
+    border-color: rgba(255, 253, 240, 0.9);
+    box-shadow: 4px 4px 0 rgba(5, 8, 22, 0.86);
+    color: #fffdf0;
+  }
+
+  .heroNav {
+    background: rgba(5, 8, 22, 0.9);
+    border: 3px solid rgba(255, 253, 240, 0.68);
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 rgba(5, 8, 22, 0.72);
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+    min-width: 190px;
+    overflow: hidden;
+    padding: 12px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 12px);
+  }
+
+  .heroMenu:not([open]) .heroNav {
+    display: none;
+  }
+
+  .heroNav a {
+    width: 100%;
+  }
+
+  .steamLogoPlaceholder {
+    height: 54px;
+    left: 50%;
+    position: absolute;
+    top: clamp(232px, 58vw, 300px);
+    transform: translateX(-50%);
+    width: 154px;
+  }
+
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .heroButton {
+    width: 100%;
+  }
+
+  .angleBand {
+    align-items: flex-end;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: clamp(90px, 22vw, 140px);
+  }
+
+  .betaBox {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(100%, 430px);
+    text-align: center;
+    transform: translateY(-36px);
+  }
+
+  .betaBox p {
+    display: none;
+  }
+
+  .betaButton {
+    justify-content: center;
+  }
+
+  .wishlistCopy h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .awardsBand {
+    padding-bottom: clamp(240px, 60vw, 340px);
+    padding-top: clamp(42px, 11vw, 78px);
+  }
+
+  .wishlistBand {
+    margin-top: clamp(-330px, -58vw, -232px);
+    min-height: clamp(620px, 122vw, 780px);
+    padding-top: clamp(120px, 27vw, 180px);
+  }
+
+  .wishlistContent {
+    text-align: center;
+    transform: translateY(clamp(-90px, -14vw, -48px));
+  }
+
+  .wishlistImage {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(88vw, 400px);
+  }
+
+  .screenshotCarousel {
+    gap: 14px;
+  }
+
+  .galleryItem {
+    border-width: 6px;
+    flex-basis: 260px;
+  }
+
+  .galleryItem.isFeatured {
+    flex-basis: min(86vw, 460px);
+  }
+
+  .galleryControls {
+    gap: 34vw;
+  }
+
+  .nav {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .heroGrid,
+  .reviewGrid,
+  .screenshotGrid,
+  .moreGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions,
+  .buyBand {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
