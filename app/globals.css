@@ -90,7 +90,7 @@ main {
   gap: 16px;
 }
 
-.heroMenu summary {
+.heroMenuButton {
   display: none;
 }
 
@@ -987,7 +987,7 @@ h3 {
     display: none;
   }
 
-  .heroMenu summary {
+  .heroMenuButton {
     align-items: center;
     background: var(--tomato);
     border: 3px solid #050816;
@@ -1006,11 +1006,7 @@ h3 {
     text-transform: uppercase;
   }
 
-  .heroMenu summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .heroMenu[open] summary {
+  .heroMenu.isOpen .heroMenuButton {
     background: rgba(255, 253, 240, 0.12);
     border-color: rgba(255, 253, 240, 0.9);
     box-shadow: 4px 4px 0 rgba(5, 8, 22, 0.86);
@@ -1033,7 +1029,7 @@ h3 {
     top: calc(100% + 12px);
   }
 
-  .heroMenu:not([open]) .heroNav {
+  .heroMenu:not(.isOpen) .heroNavMobile {
     display: none;
   }
 

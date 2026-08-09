@@ -1,3 +1,4 @@
+import MobileHeroMenu from "./MobileHeroMenu";
 import ScreenshotCarousel from "./ScreenshotCarousel";
 
 export default function Home() {
@@ -19,14 +20,7 @@ export default function Home() {
             <a href="#buy">Wishlist</a>
             <a href="#beta">Beta</a>
           </nav>
-          <details className="heroMenu">
-            <summary>Menu</summary>
-            <nav className="heroNav" aria-label="Mobile navigation">
-              <a href="#details">Details</a>
-              <a href="#buy">Wishlist</a>
-              <a href="#beta">Beta</a>
-            </nav>
-          </details>
+          <MobileHeroMenu />
         </div>
         <div className="heroActions" aria-label="Primary actions">
           <a className="heroButton secondary" href="#screens">
