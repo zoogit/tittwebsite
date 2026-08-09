@@ -1051,7 +1051,7 @@ h3 {
   }
 
   .heroActions {
-    bottom: clamp(102px, 17vw, 132px);
+    bottom: clamp(158px, 28vw, 220px);
     flex-direction: row;
     gap: 12px;
     width: min(92vw, 430px);
