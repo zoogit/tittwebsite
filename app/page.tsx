@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div className="heroActions" aria-label="Primary actions">
           <a className="heroButton secondary" href="#screens">
-            Watch demo
+            Watch now
           </a>
           <a className="heroButton primary" href="#buy">
             Buy now

@@ -1051,11 +1051,18 @@ h3 {
   }
 
   .heroActions {
-    flex-direction: column;
+    bottom: clamp(102px, 17vw, 132px);
+    flex-direction: row;
+    gap: 12px;
+    width: min(92vw, 430px);
   }
 
   .heroButton {
-    width: 100%;
+    flex: 1 1 0;
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+    min-height: 58px;
+    padding: 14px 12px;
+    white-space: nowrap;
   }
 
   .angleBand {
