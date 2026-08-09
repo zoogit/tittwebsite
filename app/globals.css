@@ -1092,6 +1092,12 @@ h3 {
     padding-top: clamp(42px, 11vw, 78px);
   }
 
+  .awardsBand .galleryHeader,
+  .awardsBand .galleryShell,
+  .awardsBand .galleryTagline {
+    transform: translateY(42px);
+  }
+
   .introBand {
     margin-bottom: -150px;
     margin-top: -150px;
@@ -1175,6 +1181,12 @@ h3 {
     padding-top: 64px;
   }
 
+  .awardsBand .galleryHeader,
+  .awardsBand .galleryShell,
+  .awardsBand .galleryTagline {
+    transform: translateY(68px);
+  }
+
   .wishlistBand {
     margin-bottom: -250px;
     margin-top: -292px;
@@ -1191,6 +1203,12 @@ h3 {
   .awardsBand {
     min-height: 900px;
     padding-bottom: 430px;
+  }
+
+  .awardsBand .galleryHeader,
+  .awardsBand .galleryShell,
+  .awardsBand .galleryTagline {
+    transform: translateY(86px);
   }
 
   .introBand {
