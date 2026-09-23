@@ -68,19 +68,16 @@ const imagery = [
 
 function Section({
   id,
-  eyebrow,
   title,
   children,
 }: {
   id: string;
-  eyebrow: string;
   title: string;
   children: React.ReactNode;
 }) {
   return (
     <section className="dsSection" id={id}>
       <header className="dsSectionHead">
-        <p className="dsEyebrow">{eyebrow}</p>
         <h2>{title}</h2>
       </header>
       {children}
@@ -111,11 +108,10 @@ export default function DesignSystem() {
         </nav>
       </header>
 
-      <Section id="principles" eyebrow="01" title="Art direction">
+      <Section id="principles" title="Art direction">
         <div className="dsGrid dsGrid4">
-          {principles.map((p, i) => (
+          {principles.map((p) => (
             <article className="dsCard" key={p.title}>
-              <span className="dsNumber">{i + 1}</span>
               <h3>{p.title}</h3>
               <p>{p.body}</p>
             </article>
@@ -123,7 +119,7 @@ export default function DesignSystem() {
         </div>
       </Section>
 
-      <Section id="color" eyebrow="02" title="Color">
+      <Section id="color" title="Color">
         <div className="dsGrid dsGrid4">
           {palette.map((c) => (
             <div className="dsSwatch" key={c.hex}>
@@ -170,7 +166,7 @@ export default function DesignSystem() {
         </div>
       </Section>
 
-      <Section id="type" eyebrow="03" title="Typography">
+      <Section id="type" title="Typography">
         <div className="dsGrid dsGrid2">
           <article className="dsCard dsTypeCard">
             <p className="dsTypeName">Bungee &middot; Display</p>
@@ -222,7 +218,7 @@ export default function DesignSystem() {
         </div>
       </Section>
 
-      <Section id="components" eyebrow="04" title="Components">
+      <Section id="components" title="Components">
         <h3 className="dsSub">Buttons</h3>
         <div className="dsStage">
           <a className="dsBtn dsBtnPrimary" href="#components">Buy now</a>
@@ -273,7 +269,7 @@ export default function DesignSystem() {
         </div>
       </Section>
 
-      <Section id="layout" eyebrow="05" title="Layout, shape and motion">
+      <Section id="layout" title="Layout, shape and motion">
         <div className="dsGrid dsGrid3">
           <article className="dsCard">
             <h3>Spacing</h3>
@@ -322,7 +318,7 @@ export default function DesignSystem() {
         </p>
       </Section>
 
-      <Section id="imagery" eyebrow="06" title="Imagery">
+      <Section id="imagery" title="Imagery">
         <div className="dsGrid dsGrid4">
           {imagery.map((img) => (
             <figure className="dsImage" key={img.src}>

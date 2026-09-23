@@ -9,14 +9,14 @@ export const metadata: Metadata = {
     title: "TITT: Thunder in the Territories",
     description:
       "Book your territory, build heat, and fight for wrestling dominance across a 28 week season.",
-    images: ["/og.png"],
+    images: ["/tiitt-logo.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "TITT: Thunder in the Territories",
     description:
       "Book your territory, build heat, and fight for wrestling dominance across a 28 week season.",
-    images: ["/og.png"],
+    images: ["/tiitt-logo.png"],
   },
   icons: {
     icon: "/favicon.svg",
