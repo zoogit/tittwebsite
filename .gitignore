@@ -38,6 +38,7 @@ yarn-error.log*
 
 /dist/
 /netlify-dist/
+/tsconfig.tsbuildinfo
 /.wrangler/
 /outputs/
 /work/
