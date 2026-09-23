@@ -561,7 +561,6 @@
 
 .dsImageFrame {
   background: #050816;
-  border: 6px solid #cdd3d8;
   box-shadow: 8px 8px 0 rgba(5, 8, 22, 0.55);
 }
 
@@ -575,10 +574,6 @@
   display: grid;
   gap: 4px;
   margin-top: 18px;
-}
-
-.dsImage figcaption span {
-  font-size: 0.85rem;
 }
 
 .dsFooter {

@@ -327,7 +327,6 @@ export default function DesignSystem() {
               </div>
               <figcaption>
                 <strong>{img.label}</strong>
-                <span>{img.note}</span>
               </figcaption>
             </figure>
           ))}
