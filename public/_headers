@@ -1,2 +1,8 @@
+/design-system
+  Content-Security-Policy: frame-ancestors 'self' https://nimamaghame.com https://www.nimamaghame.com https://nimamaghamedesign.com https://www.nimamaghamedesign.com
+
+/design-system/
+  Content-Security-Policy: frame-ancestors 'self' https://nimamaghame.com https://www.nimamaghame.com https://nimamaghamedesign.com https://www.nimamaghamedesign.com
+
 /design-system/*
   Content-Security-Policy: frame-ancestors 'self' https://nimamaghame.com https://www.nimamaghame.com https://nimamaghamedesign.com https://www.nimamaghamedesign.com
